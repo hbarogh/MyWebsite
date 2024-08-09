@@ -1,0 +1,214 @@
+.WorksbackgroundColor{
+  background-color: #121513;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.Photo-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumnail {
+  width: 300px;
+  display: block;
+}
+
+.Photo-preview{
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+/* WHERE I STYLE THE PHOTOS */
+.thumbnail-container {
+  position: relative;
+  width: 300px; /* Adjust this size as needed */
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px; /* Optional padding */
+  border-radius: 5px; /* Optional rounded corners */
+  cursor: pointer;
+}
+
+.overlay-text:hover {
+  background-color: transparent; /* Removes the background color on hover */
+  text-decoration: underline;
+  text-underline-offset: 0.3em; /* Adjust the distance between the text and underline */
+  text-decoration-color: grey; /* Set underline color to grey */
+}
+
+
+
+/* .AboutButton {
+  color: white;
+  padding: auto;
+  font: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: auto;
+  display: inline-block;
+}
+
+
+.WorksButton{
+  color: white;
+  text-align: center;
+  padding: auto;
+  font: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 50px; 
+  display: inline-block;
+
+}
+
+
+.LetsTalkButton{
+  color: white;
+  text-align: center;
+  padding: auto;
+  font: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: auto;
+  display: inline-block;
+
+} */
