@@ -1,11 +1,71 @@
 body{
     background-color: #ffffff;
   }
-  /* DESKTOP NAV */
+  /* DESKTOP NAVIGATION */
 
-nav,
-.nav-links {
+/* Container for the entire navbar */
+.nav-container {
   display: flex;
+  justify-content: space-between; /* Space out the left, center, and right sections */
+  align-items: center;
+  padding: 0 50px; /* Adjust the padding to position the nav correctly */
+}
+
+/* Adjust the left side (logo) */
+.left-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px; /* Adjust padding to move the logo */
+}
+
+/* Center-aligned nav links */
+.center-nav {
+  flex: 2;
+  text-align: center;
+}
+
+/* Navbar links styling */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Ensure links are inline */
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px; /* Space between the links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px; /* Adjust font size for visibility */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-color: grey;
+}
+
+/* Right-aligned Instagram logo */
+.right-nav {
+  flex: 1;
+  text-align: right;
+}
+
+/* Social logo styling */
+.social-logo {
+  width: 24px; /* Adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+  margin-left: 10px; /* Adds space between the logo and the text */
+}
+
+.social-logo:hover {
+  opacity: 0.8; /* Hover effect */
 }
 
 nav {
@@ -40,6 +100,7 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
+
 
 /* HAMBURGER MENU */
 
@@ -120,7 +181,43 @@ a:hover {
 .hamburger-icon span:first-child {
   transform: none;
 }
+/* Desktop navigation is hidden on smaller screens */
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none; /* Hide the desktop navbar */
+  }
+  
+  #hamburger-nav {
+    display: flex; /* Show the hamburger menu */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust as necessary */
+  }
 
+  .hamburger-menu {
+    display: inline-block;
+  }
+
+  .menu-links {
+    display: none; /* Keep menu hidden initially */
+  }
+
+  .menu-links.open {
+    display: block; /* Show menu when open */
+  }
+}
+
+
+.social-logo {
+  width: 24px; /* Adjust the size as needed */
+  height: auto;
+  vertical-align: middle; /* Aligns the logo with the text in the navbar */
+  margin-left: 10px; /* Adds some space between the logo and the text */
+}
+
+.social-logo:hover {
+  opacity: 0.8; /* Adds a hover effect */
+}
   .heroImage{
     background-size: cover;
     background-position: center;

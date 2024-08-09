@@ -7,20 +7,34 @@
 
 <body>
   <nav id="desktop-nav">
-    <div class="logo">
-      <a href="HomePage.html">Hayden Barogh</a> <!-- Assuming "index.html" is your homepage -->
-    </div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="works.html">Works</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="nav-container">
+      <!-- Left-aligned logo and links -->
+      <div class="left-nav">
+        <div class="logo">
+          <a href="HomePage.html">Hayden Barogh</a>
+        </div>
+      </div>
+  
+      <!-- Center-aligned nav links -->
+      <div class="center-nav">
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="works.html">Works</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Right-aligned Instagram logo -->
+      <div class="right-nav">
+        <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank">
+          <img src="Images/logos/Instagram-Logo.png" alt="Instagram" class="social-logo">
+        </a>
+      </div>
     </div>
   </nav>
   <nav id="hamburger-nav">
     <div class="logo">
-      <a href="index.html">Hayden Barogh</a>
+      <a href="HomePage.html">Hayden Barogh</a>
     </div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
@@ -32,6 +46,11 @@
         <li><a href="about.html" onclick="toggleMenu()">About</a></li>
         <li><a href="works.html" onclick="toggleMenu()">Works</a></li>
         <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        <li>
+          <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank" onclick="toggleMenu()">
+            <img src="Images/Instagram-Logo.png" alt="Instagram" class="social-logo">
+          </a>
+        </li>
       </div>
     </div>
   </nav>
