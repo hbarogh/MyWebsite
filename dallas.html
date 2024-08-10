@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dallas</title>
+    <link rel = "stylesheet" href="CSS Code/dallas.css">
+  </head>
+  <body>
+    
+    <nav id="desktop-nav">
+      <div class="nav-container">
+        <!-- Left-aligned logo and links -->
+        <div class="left-nav">
+          <div class="logo">
+            <a href="index.html">Hayden Barogh</a>
+          </div>
+        </div>
+    
+        <!-- Center-aligned nav links -->
+        <div class="center-nav">
+          <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Right-aligned Instagram logo -->
+        <div class="right-nav">
+          <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank">
+            <img src="Images/logos/Instagram-Logo.png" alt="Instagram" class="social-logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">
+        <a href="index.html">Hayden Barogh</a>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="works.html" onclick="toggleMenu()">Works</a></li>
+          <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank" onclick="toggleMenu()">
+              <img src="Images/logos/Instagram-Logo.png" alt="Instagram" class="social-logo">
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <h1 class="page-title">Dallas</h1>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0785.JPG" alt="Photo 1" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0786.JPG" alt="Photo 2" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0794.JPG" alt="Photo 3" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0795.JPG" alt="Photo 4" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0805.JPG" alt="Photo 5" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0809.JPG" alt="Photo 6" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0812.JPG" alt="Photo 7" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0789.JPG" alt="Photo 8" class="gallery-photo">
+      </div>
+      <div class="gallery-item">
+        <img src="Images/dallas/IMG_0793.JPG" alt="Photo 9" class="gallery-photo">
+      </div>
+      <!-- Add more photos as needed -->
+    </div>
+    
+    <!-- Lightbox for viewing images -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <!-- Link to the external JS file -->
+  <script src="script.js"></script>
+  <script>
+    // Get the lightbox elements
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightbox-img");
+    var close = document.getElementsByClassName("close")[0];
+  
+    // Loop through all images with the "gallery-photo" class
+    var photos = document.getElementsByClassName("gallery-photo");
+    for (let i = 0; i < photos.length; i++) {
+      photos[i].onclick = function() {
+        lightbox.style.display = "block";
+        lightboxImg.src = this.src;
+      }
+    }
+  
+    // Close the lightbox when the user clicks on the "close" button
+    close.onclick = function() {
+      lightbox.style.display = "none";
+    }
+  
+    // Close the lightbox when the user clicks anywhere outside of the image
+    lightbox.onclick = function(event) {
+      if (event.target !== lightboxImg) {
+        lightbox.style.display = "none";
+      }
+    }
+  </script>
+  
+  </body>
+</html>

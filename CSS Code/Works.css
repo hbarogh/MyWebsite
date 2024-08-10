@@ -223,32 +223,36 @@ a:hover {
 .social-logo:hover {
   opacity: 0.8; /* Adds a hover effect */
 }
-.Photo-preview {
+/* .Photo-preview {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+ */
 
-.thumnail {
-  width: 300px;
-  display: block;
-}
 
 .Photo-preview{
-  width: 300px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+}
+.thumbnail-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row if they don't fit */
+  justify-content: center; /* Center the thumbnails */
+  gap: 20px; /* Space between the thumbnails */
 }
 
 /* WHERE I STYLE THE PHOTOS */
 .thumbnail-container {
-  position: relative;
   width: 300px; /* Adjust this size as needed */
+  margin: 10px;
+  position: relative;
 }
 
 .thumbnail {
-  display: block;
   width: 100%;
   height: auto;
 }

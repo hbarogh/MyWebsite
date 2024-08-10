@@ -255,47 +255,4 @@ a:hover {
 
 
 
-.backgroundColor{
-  background-color: #3d3737;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.AboutButton {
-color: white;
-padding: 100px;
-font: Roboto;
-font-size: 20px;
-font-weight: bold;
-text-align: center;
-display: inline-block;
-}
-
-
-.WorksButton{
-  color: white;
-  text-align: center;
-  padding: 100px;
-  font: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  display: inline-block;
-}
-
-
-.LetsTalkButton{
-  color: white;
-  text-align: center;
-  padding: 60px;
-  font: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  display: inline-block;
-
-}
-
-
 
