@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel = "stylesheet" href="CSS Code/contact.css">
+
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="nav-container">
+      <!-- Left-aligned logo and links -->
+      <div class="left-nav">
+        <div class="logo">
+          <a href="index.html">Hayden Barogh</a>
+        </div>
+      </div>
+  
+      <!-- Center-aligned nav links -->
+      <div class="center-nav">
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="works.html">Works</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Right-aligned Instagram logo -->
+      <div class="right-nav">
+        <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank">
+          <img src="Images/logos/Instagram-Logo.png" alt="Instagram" class="social-logo">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">
+      <a href="index.html">Hayden Barogh</a>
+    </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+        <li><a href="works.html" onclick="toggleMenu()">Works</a></li>
+        <li><a href="Contact.html" onclick="toggleMenu()">Contact</a></li>
+        <li>
+          <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank" onclick="toggleMenu()">
+            <img src="Images/Instagram-Logo.png" alt="Instagram" class="social-logo">
+          </a>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <div class="contact-section">
+    <h1 class="contact-title">LET’S PLAN A SHOOT</h1>
+    <p class="contact-description">
+        In the section below, you will add your email address, then message me that you are interested in booking a shoot. Add any desired details or requests that you want me to know about the shoot!
+    </p>
+    
+    <form class="contact-form">
+        <label for="email">Email (required)</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message (required)</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="send-button">Send</button>
+    </form>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
