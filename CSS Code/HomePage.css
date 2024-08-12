@@ -1,5 +1,7 @@
 body{
     background-color: #ffffff;
+    margin: 0;
+    padding: 0;
   }
   /* DESKTOP NAVIGATION */
 
@@ -69,9 +71,12 @@ body{
 }
 
 nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
+  position: absolute; /* Make the navbar position absolute */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure it stays on top */
+  background: transparent; /* Make the navbar background transparent */
 }
 
 .nav-links {
@@ -81,7 +86,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -95,6 +100,13 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+}
+
+.logo a{
+  color:rgb(0, 0, 0);
+}
+.logo a:hover{
+  color:grey;
 }
 
 .logo:hover {
@@ -208,69 +220,53 @@ a:hover {
 }
 
 
-.social-logo {
-  width: 24px; /* Adjust the size as needed */
-  height: auto;
-  vertical-align: middle; /* Aligns the logo with the text in the navbar */
-  margin-left: 10px; /* Adds some space between the logo and the text */
+
+
+/* Carousel styling */
+.carousel {
+  display: flex;
+  overflow: hidden; /* Hide overflowing images */
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh; /* Full-screen height */
+} 
+
+.carousel-item {
+  flex: 0 0 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-.social-logo:hover {
-  opacity: 0.8; /* Adds a hover effect */
-}
-  .heroImage{
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /* width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px; */
-  }
-
-
-.backgroundColor{
-    background-color: #1c5c26;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.carousel-photo {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
-/* .AboutButton {
+/* Navigation buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: auto;
-  font: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  padding: auto;
-  display: inline-block;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
 }
 
-
-.WorksButton{
-  color: white;
-  text-align: center;
-  padding: auto;
-  font: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 50px; 
-  display: inline-block;
-
+.carousel-button.prev {
+  left: 10px;
 }
 
+.carousel-button.next {
+  right: 10px;
+}
 
-.LetsTalkButton{
-  color: white;
-  text-align: center;
-  padding: auto;
-  font: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  padding: auto;
-  display: inline-block;
-
-} */
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
