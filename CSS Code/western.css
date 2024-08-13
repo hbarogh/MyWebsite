@@ -183,30 +183,29 @@ transform: none;
 }
 /* Desktop navigation is hidden on smaller screens */
 @media (max-width: 768px) {
-#desktop-nav {
-  display: none; /* Hide the desktop navbar */
+  #desktop-nav {
+    display: none; /* Hide the desktop navbar */
+  }
+  
+  #hamburger-nav {
+    display: flex; /* Show the hamburger menu */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust as necessary */
+  }
+  
+  .hamburger-menu {
+    display: inline-block;
+  }
+  
+  .menu-links {
+    display: none; /* Keep menu hidden initially */
+  }
+  
+  .menu-links.open {
+    display: block; /* Show menu when open */
+  }
 }
-
-#hamburger-nav {
-  display: flex; /* Show the hamburger menu */
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px; /* Adjust as necessary */
-}
-
-.hamburger-menu {
-  display: inline-block;
-}
-
-.menu-links {
-  display: none; /* Keep menu hidden initially */
-}
-
-.menu-links.open {
-  display: block; /* Show menu when open */
-}
-}
-
 
 .social-logo {
 width: 24px; /* Adjust the size as needed */
