@@ -236,10 +236,6 @@ opacity: 0.8; /* Adds a hover effect */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.gallery-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 /* Gallery Layout 
 .gallery {
   display: flex;
@@ -247,33 +243,33 @@ opacity: 0.8; /* Adds a hover effect */
   justify-content: space-around;
   gap: 10px;
   margin-top: 20px;
-}
-
-
-.gallery-photo {
-  width: auto;
+  }
+  
+  
+  .gallery-photo {
+    width: auto;
   height: auto; /* Maintain aspect ratio 
   max-height: 80vh; /* Limit the height to 80% of the viewport 
   object-fit: cover; /* Ensure the image covers the space without distortion 
   cursor: pointer;
   transition: transform 0.2s ease;
-}
-
-.gallery-photo:hover {
-  transform: scale(1.05); /* Slight zoom on hover 
-}
-
-/* Lightbox Styles 
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .gallery-photo:hover {
+    transform: scale(1.05); /* Slight zoom on hover 
+    }
+    
+    /* Lightbox Styles 
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
 }
 
 .lightbox-content {
@@ -281,10 +277,10 @@ opacity: 0.8; /* Adds a hover effect */
   display: block;
   width: 80%;
   max-width: 700px;
-}
-
-.close {
-  position: absolute;
+  }
+  
+  .close {
+    position: absolute;
   top: 20px;
   right: 35px;
   color: white;
@@ -292,16 +288,16 @@ opacity: 0.8; /* Adds a hover effect */
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    } */
+    
+    
 /* Gallery container with masonry layout */
 .gallery {
   column-count: 3;
@@ -314,7 +310,14 @@ opacity: 0.8; /* Adds a hover effect */
 .gallery-item {
   break-inside: avoid;
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.6s ease-out;
 }
 
 .gallery-item:hover {
