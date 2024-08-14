@@ -204,10 +204,12 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px; /* Adjust as necessary */
+    position: relative;
   }
   
   .hamburger-menu {
-    display: inline-block;
+    position: absolute;
+    right: 10px;
   }
   
   .menu-links {

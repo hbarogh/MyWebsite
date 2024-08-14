@@ -219,6 +219,28 @@ opacity: 0.8; /* Adds a hover effect */
 }
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  opacity: 0; /* Start with hidden images */
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Gallery Layout */
 .gallery {
   display: flex;
@@ -228,21 +250,16 @@ opacity: 0.8; /* Adds a hover effect */
   margin-top: 20px;
 }
 
-.gallery-item {
-  flex: 1 1 calc(33.333% - 20px); /* 3 columns layout, adjust as needed */
-  margin: 10px;
-  overflow: hidden;
-  max-width: auto;
-}
 
 .gallery-photo {
-  /* max-width: 100%;
-  max-height: 300px; */
   width: 100%;
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100vh; /* Limit the height to 80% of the viewport */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+
 
 .gallery-photo:hover {
   transform: scale(1.1); /* Slight zoom on hover */
