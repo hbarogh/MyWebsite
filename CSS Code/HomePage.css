@@ -208,8 +208,7 @@ a:hover {
   }
   
   .hamburger-menu {
-    position: absolute;
-    left: 5px;
+    position: relative;
   }
   
   .menu-links {
@@ -220,11 +219,6 @@ a:hover {
     display: block; /* Show menu when open */
   }
 
-  .carousel-photo {
-    object-fit: contain; /* Ensure the whole image is visible */
-    width: 100%;
-    height: auto; /* Let the height adjust based on the width */
-  }
 
 }
 
