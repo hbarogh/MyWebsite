@@ -5,8 +5,8 @@
   margin-bottom: 20px;
 }
 
-/* DESKTOP NAV */
 /* DESKTOP NAVIGATION */
+
 
 /* Container for the entire navbar */
 .nav-container {
@@ -187,7 +187,7 @@ a:hover {
   transform: none;
 }
 /* Desktop navigation is hidden on smaller screens */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #desktop-nav {
     display: none; /* Hide the desktop navbar */
   }
@@ -202,9 +202,7 @@ a:hover {
   .hamburger-menu {
     display: inline-block;
   }
-  .hamburger-icon{
-    margin-right: 20px;
-  }
+  
   .menu-links {
     display: none; /* Keep menu hidden initially */
   }
@@ -213,7 +211,6 @@ a:hover {
     display: block; /* Show menu when open */
   }
 }
-
 
 .social-logo {
   width: 24px; /* Adjust the size as needed */
@@ -225,7 +222,6 @@ a:hover {
 .social-logo:hover {
   opacity: 0.8; /* Adds a hover effect */
 }
-
 .Photo-preview{
   display: flex;
   flex-wrap: wrap;
