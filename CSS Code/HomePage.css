@@ -209,6 +209,9 @@ a:hover {
   .hamburger-menu {
     display: inline-block;
   }
+  .hamburger-icon{
+    margin-right: 10px;
+  }
   .menu-links {
     display: none; /* Keep menu hidden initially */
   }
