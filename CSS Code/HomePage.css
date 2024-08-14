@@ -217,7 +217,22 @@ a:hover {
   .menu-links.open {
     display: block; /* Show menu when open */
   }
+
+  .carousel-photo {
+    object-fit: contain; /* Ensure the whole image is visible */
+    width: 100%;
+    height: auto; /* Let the height adjust based on the width */
   }
+
+  
+    .carousel {
+        height: 50vh; /* Reduce carousel height on smaller screens */
+    }
+
+    .carousel-item {
+        height: 50vh; /* Match carousel height */
+    }
+}
 
 
 /* Carousel styling */
