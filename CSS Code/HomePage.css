@@ -209,7 +209,7 @@ a:hover {
   
   .hamburger-menu {
     position: absolute;
-    left: 20px;
+    left: 5px;
   }
   
   .menu-links {
@@ -226,14 +226,6 @@ a:hover {
     height: auto; /* Let the height adjust based on the width */
   }
 
-  
-    .carousel {
-        height: 50vh; /* Reduce carousel height on smaller screens */
-    }
-
-    .carousel-item {
-        height: 50vh; /* Match carousel height */
-    }
 }
 
 
