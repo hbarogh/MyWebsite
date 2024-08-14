@@ -203,7 +203,7 @@ a:hover {
     display: flex; /* Show the hamburger menu */
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* Adjust as necessary */
+    padding: 0 40px; /* Adjust as necessary */
   }
   
   .hamburger-menu {
