@@ -187,7 +187,7 @@ a:hover {
   transform: none;
 }
 /* Desktop navigation is hidden on smaller screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #desktop-nav {
     display: none; /* Hide the desktop navbar */
   }
@@ -202,7 +202,6 @@ a:hover {
   .hamburger-menu {
     display: inline-block;
   }
-  
   .menu-links {
     display: none; /* Keep menu hidden initially */
   }
@@ -211,6 +210,7 @@ a:hover {
     display: block; /* Show menu when open */
   }
 }
+
 
 .social-logo {
   width: 24px; /* Adjust the size as needed */
@@ -222,13 +222,6 @@ a:hover {
 .social-logo:hover {
   opacity: 0.8; /* Adds a hover effect */
 }
-/* .Photo-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- */
-
 
 .Photo-preview{
   display: flex;
