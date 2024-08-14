@@ -210,7 +210,7 @@ a:hover {
     display: inline-block;
   }
   .hamburger-icon{
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .menu-links {
     display: none; /* Keep menu hidden initially */
