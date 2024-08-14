@@ -209,7 +209,7 @@ a:hover {
   
   .hamburger-menu {
     position: absolute;
-    right: 10px;
+    left: 20px;
   }
   
   .menu-links {
