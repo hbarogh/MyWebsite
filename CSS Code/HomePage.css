@@ -194,7 +194,7 @@ a:hover {
   transform: none;
 }
 /* Desktop navigation is hidden on smaller screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #desktop-nav {
     display: none; /* Hide the desktop navbar */
   }
