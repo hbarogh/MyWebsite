@@ -58,52 +58,52 @@
     <h1 class="page-title">Dallas</h1>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9964-Edit.jpg" alt="Photo 1" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9964-Edit.jpg" alt="Photo 1" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0358-Edit.jpg" alt="Photo 2" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0358-Edit.jpg" alt="Photo 2" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0345.jpg" alt="Photo 3" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0345.jpg" alt="Photo 3" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0263.jpg" alt="Photo 4" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0263.jpg" alt="Photo 4" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0088.jpg" alt="Photo 5" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0088.jpg" alt="Photo 5" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0425-Edit.jpg" alt="Photo 6" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0425-Edit.jpg" alt="Photo 6" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0371-Edit-2.jpg" alt="Photo 7" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0371-Edit-2.jpg" alt="Photo 7" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0068.jpg" alt="Photo 8" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0068.jpg" alt="Photo 8" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0819.jpg" alt="Photo 9" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0819.jpg" alt="Photo 9" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_0859.jpg" alt="Photo 10" class="gallery-photo">
+        <img src="Images/Graduation/IMG_0859.jpg" alt="Photo 10" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9597.jpg" alt="Photo 11" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9597.jpg" alt="Photo 11" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9601.jpg" alt="Photo 12" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9601.jpg" alt="Photo 12" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9720.jpg" alt="Photo 13" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9720.jpg" alt="Photo 13" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9555.jpg" alt="Photo 14" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9555.jpg" alt="Photo 14" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9530.jpg" alt="Photo 15" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9530.jpg" alt="Photo 15" class="gallery-photo" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="Images/Graduation/IMG_9572.jpg" alt="Photo 16" class="gallery-photo">
+        <img src="Images/Graduation/IMG_9572.jpg" alt="Photo 16" class="gallery-photo" loading="lazy">
       </div>
     </div>
     <!-- Lightbox for viewing images  -->
@@ -151,7 +151,7 @@
             entry.target.classList.add('visible');
           }
         });
-      });
+      }, { threshold: 0.2 }); // Adjust the threshold for triggering the fade-in
       
       items.forEach(item => {
         observer.observe(item);
