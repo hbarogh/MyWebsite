@@ -1,5 +1,34 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --nav-bg-color: rgba(255, 255, 255, 0.8);
+  --link-color: black;
+  --hover-color: grey;
+  --gallery-bg-color: #ffffff;
+  --lightbox-bg-color: rgba(0, 0, 0, 0.9);
+  --switch-bg-color: #ccc;
+  --switch-border-color: #ddd;
+  --switch-circle-color: #ffffff;
+  --dark-switch-bg-color: #333;
+  --dark-switch-border-color: #555;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --nav-bg-color: rgba(0, 0, 0, 0.8);
+  --link-color: #ffffff;
+  --hover-color: #bbbbbb;
+  --gallery-bg-color: #1e1e1e;
+  --lightbox-bg-color: rgba(0, 0, 0, 0.95);
+  --switch-bg-color: #444;
+  --switch-border-color: #777;
+  --switch-circle-color: #eeeeee;
+}
+
 body{
-  background-color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 /* DESKTOP NAVIGATION */
 
@@ -31,6 +60,7 @@ list-style: none;
 padding: 0;
 margin: 0;
 display: inline-block; /* Ensure links are inline */
+color: var(--text-color);
 }
 
 .nav-links li {
@@ -40,7 +70,7 @@ margin: 0 15px; /* Space between the links */
 
 .nav-links a {
 text-decoration: none;
-color: black;
+color: var(--text-color);
 font-size: 18px; /* Adjust font size for visibility */
 }
 
@@ -48,6 +78,7 @@ font-size: 18px; /* Adjust font size for visibility */
 text-decoration: underline;
 text-underline-offset: 0.3em;
 text-decoration-color: grey;
+color: var(--text-color);
 }
 
 /* Right-aligned Instagram logo */
@@ -62,6 +93,11 @@ width: 24px; /* Adjust size as needed */
 height: auto;
 vertical-align: middle;
 margin-left: 10px; /* Adds space between the logo and the text */
+filter: brightness(100%);
+}
+
+body.dark-mode .social-logo {
+  filter: brightness(100%);
 }
 
 .social-logo:hover {
@@ -81,7 +117,7 @@ font-size: 1.5rem;
 }
 
 a {
-color: black;
+color: var(--text-color);
 text-decoration: none;
 text-decoration-color: white;
 }
@@ -133,7 +169,7 @@ transition: all 0.3 ease-in-out;
 position: absolute;
 top: 100%;
 right: 0;
-background-color: white;
+background-color: var(--nav-bg-color);
 width: fit-content;
 max-height: 0;
 overflow: hidden;
@@ -145,7 +181,7 @@ display: block;
 padding: 10px;
 text-align: center;
 font-size: 1.5rem;
-color: black;
+color: var(--nav-bg-color);
 text-decoration: none;
 transition: all 0.3 ease-in-out;
 }
@@ -205,7 +241,7 @@ transform: none;
   .menu-links.open {
     display: block; /* Show menu when open */
   }
-  }
+}
 
 
 .social-logo {
@@ -263,7 +299,12 @@ opacity: 0.8; /* Adds a hover effect */
   height: auto;
   object-fit: cover;
   cursor: pointer;
+  filter: brightness(100%);
   transition: transform 0.2s ease;
+}
+
+body.dark-mode .gallery-photo{
+  filter: brightness(100%);
 }
 
 .gallery-photo:hover {
@@ -280,7 +321,7 @@ opacity: 0.8; /* Adds a hover effect */
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--lightbox-bg-color);
 }
 
 .lightbox-content {
@@ -325,6 +366,54 @@ opacity: 0.8; /* Adds a hover effect */
   text-align: center;
   font-size: 3rem;
   margin-top: 20px;
-  color: black;
+  color: var(--text-color);
 }
 
+
+/*This is the section for the switch between dark mode and light mode */
+/* Container for the theme switch */
+.theme-switch {
+  display: inline-block;
+  position: relative;
+}
+
+/* Hide the default checkbox */
+#theme-toggle {
+  display: none;
+}
+
+/* The switch background */
+.switch {
+  width: 50px;
+  height: 26px;
+  background-color: var(--switch-bg-color);
+  border: 2px solid var(--switch-border-color);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* The sliding circle */
+.switch::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--switch-circle-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When the checkbox is checked (dark mode) */
+#theme-toggle:checked + .switch {
+  background-color: var(--dark-switch-bg-color);
+  border-color: var(--dark-switch-border-color)
+}
+
+#theme-toggle:checked + .switch::before {
+  transform: translateX(24px);
+}

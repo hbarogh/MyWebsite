@@ -29,6 +29,10 @@
           <a href="https://www.instagram.com/haydenbproductions?igsh=MWVwejF6MmtrcTMycA%3D%3D&utm_source=qr" target="_blank">
             <img src="Images/logos/Instagram-Logo.png" alt="Instagram" class="social-logo">
           </a>
+          <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle" onclick="toggleDarkMode()" />
+            <label for="theme-toggle" class="switch"></label>
+          </div>
         </div>
       </div>
     </nav>
@@ -140,6 +144,19 @@
     
     <!-- Link to the external JS file -->
   <script src="script.js"></script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDarkMode);
+    }
+    
+    window.onload = function () {
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      document.body.classList.toggle('dark-mode', isDarkMode);
+      document.getElementById('theme-toggle').checked = isDarkMode;
+    };
+  </script>
   <script>
     // Get the lightbox elements
     var lightbox = document.getElementById("lightbox");
